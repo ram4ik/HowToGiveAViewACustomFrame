@@ -10,7 +10,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
+        
+        VStack {
+            
+            Text("Please log in")
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                .font(.largeTitle)
+                .foregroundColor(.white)
+                .background(Color.red)
+                .padding()
+                
+            Button(action: {
+                print("Button tapped")
+            }) {
+                Text("Welcome")
+                    .frame(minWidth: 0, maxWidth: 200, minHeight: 0, maxHeight: 200)
+                    .font(.largeTitle)
+            }
+        }
     }
 }
 
